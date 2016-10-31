@@ -101,26 +101,22 @@ function guardaTarjeta(e){
 function dragStart(e){
     e.dataTransfer.setData("Text",e.target.id);
     e.dataTransfer.setData("otro",e.target.parentElement.id);
-    e.target.setAttribute("class","well wellStart");
+    this.setAttribute("class","well wellStart");
 }
 function dragEnd(e){
-    e.target.setAttribute("class","well wellEnd");
-    console.log(e);
+    this.setAttribute("class","well wellEnd");
 }
 function allowDrop(e){
-
-   if(e.target.className=="lista inline"){
-         e.preventDefault();
+    e.preventDefault();
+    if(e.target.className=="lista inline"){
          e.target.style.borderColor="yellow";
     }
-    return;
 }
 function drop(e){
+    e.preventDefault();
     var data = e.dataTransfer.getData("Text");
     var idOriginal = e.dataTransfer.getData("otro");
-    e.target.insertBefore(document.getElementById(data),e.target.childNodes[1]);
-    e.preventDefault();
-    e.target.style.borderColor="#5bc0de";
+    this.insertBefore(document.getElementById(data),this.childNodes[1]);
+    this.style.borderColor="#5bc0de";
     document.getElementById(idOriginal).style.borderColor="#5bc0de";
-
 }
