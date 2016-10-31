@@ -1,0 +1,48 @@
+h1{
+    color:#5bc0de;
+    font-family: fantasy;
+}
+.lista{
+    width: 20%;
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #5bc0de;
+    background-color: transparent;
+}
+.listaOver{
+    background-color: pink !important;
+}
+.inline{
+    float:left;
+}
+
+textarea{
+    width: 100%;
+}
+
+label{
+    width: 100%;
+    border: 1px solid pink;
+}
+
+.well-sm {
+    background-color: pink;
+    margin-bottom: 5px;
+    font-weight: 700 !important;
+}
+.well {
+    margin-bottom: 5px;
+    padding: 8px;
+    font-weight: 100;
+}
+.wellStart {
+    background-color: #A9F5F2 !important;
+}
+.wellEnd{
+    font-style: italic;
+    color:#FF00BF;
+}
+.glyphicon-remove{
+    font-size: 15px;
+    color:red;
+}
